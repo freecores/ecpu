@@ -97,8 +97,8 @@ module alu_controller (
   //assign clr_C  =   opcode_sel[   `clrC];
   
   // state control
-  //always @(posedge clk or reset)
-  always @(posedge clk or posedge reset) // for systemc
+  always @(posedge clk or reset)
+  //always @(posedge clk or posedge reset) // for systemc
   begin
     if    (reset)
       this_opcode <= `cCLR;
